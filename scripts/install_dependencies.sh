@@ -10,7 +10,7 @@ rpm -ivh $meta_dir/epel-release-6-8.noarch.rpm
 
 echo ""
 echo "Installing dependencies.. yum -y install gcc python-devel.x86_64 python-pip ssh git"
-yum -y  install gcc python-devel.x86_64 python-pip
+yum -y  install gcc python-devel.x86_64 python-pip ssh git
 
 echo "====== Installing python-setuptools using yum -y install python-setuptools ======"
 
