@@ -2,7 +2,6 @@
 # Script to setup a fresh installation of CentOS to run OVPL
 # Installs: Dependencies: python-devel, git, pip; mongodb; openvz.
 
-
 LOGGFILE="setup-ovpl.log"
 DATE=$(date)
 
@@ -71,6 +70,9 @@ if [[ -f "install_dependencies.sh" ]];then
 	if [ $? -ne 0 ]; then
  		echo ""
   		echo "[[$DATE:: $0 :: Line $LINENO::]] Error installing dependencies. Quitting!" 2>&1 | tee -a $LOGGFILE
+		echo "======================"
+		echo "See logs at $LOGGFILE"
+		echo "====================="
   		exit 1
 	fi
 else
@@ -83,8 +85,11 @@ if [[ -f "install_openvz.sh" ]];then
 	./install_openvz.sh
 	if [ $? -ne 0 ]; then
  		echo ""
-  		echo "[[$DATE:: $0 :: Line $LINENO::]] Error installing openvz. Quitting! See log file" 2>&1 | tee -a $LOGGFILE
-  		exit 1
+  		echo "[[$DATE:: $0 :: Line $LINENO::]] Error installing openvz. Quitting!" 2>&1 | tee -a $LOGGFILE
+		echo "======================"
+		echo "See logs at $LOGGFILE"
+		echo "====================="
+		exit 1
 	fi
 else
 	echo "[[$DATE:: $0:: Line $LINENO::]] install_openvz.sh file not exist" 2>&1 | tee -a $LOGGFILE
@@ -97,7 +102,10 @@ if [[ -f "install_mongodb.sh" ]];then
 	if [ $? -ne 0 ]; then
  		echo ""
   		echo "[[$DATE:: $0 :: Line $LINENO::]] Error installing mongodb. Quitting! " 2>&1 | tee -a $LOGGFILE
-  		exit 1
+		echo "======================"
+		echo "See logs at $LOGGFILE"
+		echo "====================="
+ 		exit 1
 	fi
 else
 	echo "[[$DATE:: $0 :: Line $LINENO::]] install_mongodb.sh file not exist" 2>&1 | tee -a $LOGGFILE
@@ -110,7 +118,10 @@ if [[ -f "install_ovpl.sh" ]];then
 	if [ $? -ne 0 ]; then
  		echo ""
   		echo "[[$DATE:: $0 :: Line $LINENO::]] Error installing ovpl. Quitting! " 2>&1 | tee -a $LOGGFILE
-  		exit 1
+		echo "======================"
+		echo "See logs at $LOGGFILE"
+		echo "====================="
+ 		exit 1
 	fi
 else
 	echo "[[$DATE:: $0 :: Line $LINENO::]] install_ovpl.sh file not exist" 2>&1 | tee -a $LOGGFILE

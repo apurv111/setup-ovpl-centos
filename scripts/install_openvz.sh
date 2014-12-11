@@ -1,7 +1,6 @@
 #!/bin/bash
 # Script to setup OpenVZ repo, install and configure OpenVZ
 
-
 DATE=$(date)
 LOGGFILE="setup-ovpl.log"
 meta_dir="../meta"
