@@ -4,10 +4,10 @@
 
 # E.g.,
 # Note the port number after the second (:). 
-export http_proxy="proxy.iiit.ac.in:8080"
+export http_proxy=""
 
 #set your https proxy.  Similar to the above.
-export https_proxy="proxy.iiit.ac.in:8080"
+export https_proxy=""
 
 #Loggfile name
 export LOGFILE="setup-ovpl.log"
