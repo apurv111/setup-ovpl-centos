@@ -10,5 +10,5 @@ export http_proxy="proxy.iiit.ac.in:8080"
 export https_proxy="proxy.iiit.ac.in:8080"
 
 #Loggfile name
-export LOGFILE="setup-ovpl.log"
+export LOGGFILE="setup-ovpl.log"
 export DATE=$(date)
