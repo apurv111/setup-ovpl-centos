@@ -1,8 +1,6 @@
 #!/bin/bash
-# Script to setup OpenVZ repo, install and configure OpenVZ
+# Script to setup OpenVZ repo, install and configure 
 
-DATE=$(date)
-LOGGFILE="setup-ovpl.log"
 meta_dir="../meta"
 vz_template_file="ubuntu-12.04-custom-x86_64.tar.gz"
 

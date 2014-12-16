@@ -21,7 +21,7 @@ else
 	git checkout tags/v1.0.0
 
 fi
-cd ovpl
+
 echo "[[$DATE:: $0 :: Line $LINENO::]] Running 'python setup.py install' to install pre-requisites for run ovpl " 2>&1 | tee -a $LOGGFILE
 python setup.py install
 if [[ $? -ne 0 ]];then	

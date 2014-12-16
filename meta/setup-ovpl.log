@@ -1,0 +1,45 @@
+[[Thu Dec 11 10:09:35 IST 2014:: ./install_openvz.sh :: Line 11::]] Downloading ubuntu-12.04-custom-x86_64.tar.gz file to ../meta directory
+[[Thu Dec 11 10:09:35 IST 2014:: ./install_openvz.sh :: Line 15::]] Error in Downloading ubuntu-12.04-custom-x86_64.tar.gz file to ../meta directory..
+[Thu Dec 11 10:09:35 IST 2014:: ./install_openvz.sh :: Line 19::]] copying openvz.repo into /etc/yum/repos.d/
+[Thu Dec 11 10:09:35 IST 2014:: ./install_openvz.sh :: Line 22::]] Importing RPM-GPG-Key for openvz..
+[[Thu Dec 11 10:09:35 IST 2014:: ./install_openvz.sh :: Line 25::]] Installing the OpenVZ kernel..
+[[Thu Dec 11 10:09:35 IST 2014:: ./install_openvz.sh :: Line 32::]] Configuring OpenVZ..
+[[Thu Dec 11 10:09:35 IST 2014:: ./install_openvz.sh :: Line 35::]] Disabled SELINUX..
+[[Thu Dec 11 10:09:35 IST 2014:: ./install_openvz.sh :: Line 37::]] Installing OpenVZ tools..
+[[Thu Dec 11 10:09:35 IST 2014:: ./install_openvz.sh :: Line 46::]] VZ OS template file not found!
+[[Thu Dec 11 10:09:35 IST 2014:: ./install_openvz.sh :: Line 58::]] Allowing multiple subnets to reside on the same network interface..
+[[Thu Dec 11 10:09:35 IST 2014:: ./install_openvz.sh :: Line 62::]] Setting container layout to default to ploop (VM in a file)..
+[[Thu Dec 11 10:09:35 IST 2014:: ./install_openvz.sh :: Line 65::]] Setting Ubuntu 12.04 64bit to be the default template..
+[[Thu Dec 11 10:09:35 IST 2014:: ./install_openvz.sh :: Line 72::]] Setting iptables
+[[Thu Dec 11 10:09:35 IST 2014:: ./install_openvz.sh :: Line 74::]] Saving iptables
+[[Thu Dec 11 10:09:35 IST 2014:: ./install_openvz.sh :: Line 76::]] Finished installing OpenVZ
+[[Thu Dec 11 10:21:08 IST 2014:: ./install_openvz.sh :: Line 11::]] Downloading ubuntu-12.04-custom-x86_64.tar.gz file to ../meta directory
+[[Thu Dec 11 10:21:08 IST 2014:: ./install_openvz.sh :: Line 15::]] Error in Downloading ubuntu-12.04-custom-x86_64.tar.gz file to ../meta directory..
+[Thu Dec 11 10:21:08 IST 2014:: ./install_openvz.sh :: Line 19::]] copying openvz.repo into /etc/yum/repos.d/
+[Thu Dec 11 10:21:08 IST 2014:: ./install_openvz.sh :: Line 22::]] Importing RPM-GPG-Key for openvz..
+[[Thu Dec 11 10:21:08 IST 2014:: ./install_openvz.sh :: Line 25::]] Installing the OpenVZ kernel..
+[[Thu Dec 11 10:21:08 IST 2014:: ./install_openvz.sh :: Line 32::]] Configuring OpenVZ..
+[[Thu Dec 11 10:21:08 IST 2014:: ./install_openvz.sh :: Line 35::]] Disabled SELINUX..
+[[Thu Dec 11 10:21:08 IST 2014:: ./install_openvz.sh :: Line 37::]] Installing OpenVZ tools..
+[[Thu Dec 11 10:21:08 IST 2014:: ./install_openvz.sh :: Line 46::]] VZ OS template file not found!
+[[Thu Dec 11 10:21:08 IST 2014:: ./install_openvz.sh :: Line 58::]] Allowing multiple subnets to reside on the same network interface..
+[[Thu Dec 11 10:21:08 IST 2014:: ./install_openvz.sh :: Line 62::]] Setting container layout to default to ploop (VM in a file)..
+[[Thu Dec 11 10:21:08 IST 2014:: ./install_openvz.sh :: Line 65::]] Setting Ubuntu 12.04 64bit to be the default template..
+[[Thu Dec 11 10:21:08 IST 2014:: ./install_openvz.sh :: Line 72::]] Setting iptables
+[[Thu Dec 11 10:21:08 IST 2014:: ./install_openvz.sh :: Line 74::]] Saving iptables
+[[Thu Dec 11 10:21:08 IST 2014:: ./install_openvz.sh :: Line 76::]] Finished installing OpenVZ
+[[Mon Dec 15 09:25:25 IST 2014:: ./install_openvz.sh :: Line 9::]] Downloading ubuntu-12.04-custom-x86_64.tar.gz file to ../meta directory
+[[Mon Dec 15 09:25:25 IST 2014:: ./install_openvz.sh :: Line 13::]] Error in Downloading ubuntu-12.04-custom-x86_64.tar.gz file to ../meta directory..
+[Mon Dec 15 09:25:25 IST 2014:: ./install_openvz.sh :: Line 17::]] copying openvz.repo into /etc/yum/repos.d/
+[Mon Dec 15 09:25:25 IST 2014:: ./install_openvz.sh :: Line 20::]] Importing RPM-GPG-Key for openvz..
+[[Mon Dec 15 09:25:25 IST 2014:: ./install_openvz.sh :: Line 23::]] Installing the OpenVZ kernel..
+[[Mon Dec 15 09:25:25 IST 2014:: ./install_openvz.sh :: Line 30::]] Configuring OpenVZ..
+[[Mon Dec 15 09:25:25 IST 2014:: ./install_openvz.sh :: Line 33::]] Disabled SELINUX..
+[[Mon Dec 15 09:25:25 IST 2014:: ./install_openvz.sh :: Line 35::]] Installing OpenVZ tools..
+[[Mon Dec 15 09:25:25 IST 2014:: ./install_openvz.sh :: Line 44::]] VZ OS template file not found!
+[[Mon Dec 15 09:25:25 IST 2014:: ./install_openvz.sh :: Line 56::]] Allowing multiple subnets to reside on the same network interface..
+[[Mon Dec 15 09:25:25 IST 2014:: ./install_openvz.sh :: Line 60::]] Setting container layout to default to ploop (VM in a file)..
+[[Mon Dec 15 09:25:25 IST 2014:: ./install_openvz.sh :: Line 63::]] Setting Ubuntu 12.04 64bit to be the default template..
+[[Mon Dec 15 09:25:25 IST 2014:: ./install_openvz.sh :: Line 70::]] Setting iptables
+[[Mon Dec 15 09:25:25 IST 2014:: ./install_openvz.sh :: Line 72::]] Saving iptables
+[[Mon Dec 15 09:25:25 IST 2014:: ./install_openvz.sh :: Line 74::]] Finished installing OpenVZ

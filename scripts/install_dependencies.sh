@@ -1,8 +1,6 @@
 #!/bin/bash
 
 meta_dir="../meta"
-DATE=$(date)
-LOGGFILE="setup-ovpl.log"
 
 #wget http://download.fedoraproject.org/pub/epel/6/i386/epel-release-6-8.noarch.rpm
 echo "[[$DATE:: $0 :: Line $LINENO::]] Setting up EPEL repo.." 2>&1 | tee -a $LOGGFILE

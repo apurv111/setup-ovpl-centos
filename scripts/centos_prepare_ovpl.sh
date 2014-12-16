@@ -2,8 +2,23 @@
 # Script to setup a fresh installation of CentOS to run OVPL
 # Installs: Dependencies: python-devel, git, pip; mongodb; openvz.
 
-LOGGFILE="setup-ovpl.log"
-DATE=$(date)
+# read proxy settings from config file
+if [[ -f "config.sh" ]];then
+	echo "[[$DATE:: $0 :: Line $LINENO::]] Reading config.sh file for proxy settings" 2>&1 | tee -a $LOGGFILE
+	source ./config.sh
+	if [[ -n $http_proxy ]]; then
+  		
+  		export http_proxy=$http_proxy
+  		echo "[[$DATE:: $0 :: Line $LINENO::]] export http_proxy = $http_proxy" 2>&1 | tee -a $LOGGFILE
+	fi
+	if [[ -n $https_proxy ]]; then
+  		export https_proxy=$https_proxy
+  		echo "[[$DATE:: $0 :: Line $LINENO::]] export https_proxy = $https_proxy" 2>&1 | tee -a $LOGGFILE
+	fi
+else
+	echo "[[$DATE:: $0 :: Line $LINENO::]] config.sh file not exist" 2>&1 | tee -a $LOGGFILE
+	exit 1
+fi
 
 if [[ -f $LOGGFILE ]];then
 	echo "============================================="
@@ -31,23 +46,6 @@ if [[ ! -d "../meta" ]]; then
   echo "Please contact the author of the script."
   exit 1
 fi
-# read proxy settings from config file
-if [[ -f "config.sh" ]];then
-	echo "[[$DATE:: $0 :: Line $LINENO::]] Reading config.sh file for proxy settings" 2>&1 | tee -a $LOGGFILE
-	source ./config.sh
-	if [[ -n $http_proxy ]]; then
-  		
-  		export http_proxy=$http_proxy
-  		echo "[[$DATE:: $0 :: Line $LINENO::]] export http_proxy = $http_proxy" 2>&1 | tee -a $LOGGFILE
-	fi
-	if [[ -n $https_proxy ]]; then
-  		export https_proxy=$https_proxy
-  		echo "[[$DATE:: $0 :: Line $LINENO::]] export https_proxy = $https_proxy" 2>&1 | tee -a $LOGGFILE
-	fi
-else
-	echo "[[$DATE:: $0 :: Line $LINENO::]] config.sh file not exist" 2>&1 | tee -a $LOGGFILE
-	exit 1
-fi
 
 #updating system
 echo ""
@@ -74,6 +72,9 @@ if [[ -f "install_dependencies.sh" ]];then
 		echo "See logs at $LOGGFILE"
 		echo "====================="
   		exit 1
+	else
+       		echo "[[$DATE:: $0 :: Line $LINENO::]] successfully installed dependencies..." 2>&1 | tee -a $LOGGFILE
+
 	fi
 else
 	echo "[[$DATE:: $0 :: Line $LINENO::]] install_dependencies.sh file not exist" 2>&1 | tee -a $LOGGFILE
@@ -90,6 +91,10 @@ if [[ -f "install_openvz.sh" ]];then
 		echo "See logs at $LOGGFILE"
 		echo "====================="
 		exit 1
+	else
+       		echo "[[$DATE:: $0 :: Line $LINENO::]] successfully installed openvz..." 2>&1 | tee -a $LOGGFILE
+
+	 
 	fi
 else
 	echo "[[$DATE:: $0:: Line $LINENO::]] install_openvz.sh file not exist" 2>&1 | tee -a $LOGGFILE
@@ -106,6 +111,10 @@ if [[ -f "install_mongodb.sh" ]];then
 		echo "See logs at $LOGGFILE"
 		echo "====================="
  		exit 1
+		
+	else
+      		echo "[[$DATE:: $0 :: Line $LINENO::]] successfully installed mongodb..." 2>&1 | tee -a $LOGGFILE
+
 	fi
 else
 	echo "[[$DATE:: $0 :: Line $LINENO::]] install_mongodb.sh file not exist" 2>&1 | tee -a $LOGGFILE
@@ -122,6 +131,13 @@ if [[ -f "install_ovpl.sh" ]];then
 		echo "See logs at $LOGGFILE"
 		echo "====================="
  		exit 1
+	else
+       	
+		echo "=========================================================================================================="
+		echo "[[$DATE:: $0 :: Line $LINENO::]] Congrats! You have setup OVPL successfully!!! :-)" 2>&1 | tee -a $LOGGFILE
+		echo "Now run 'make' from inside the src directory"
+		echo " of OVPL to start the services."
+		echo "=========================================================================================================="   		
 	fi
 else
 	echo "[[$DATE:: $0 :: Line $LINENO::]] install_ovpl.sh file not exist" 2>&1 | tee -a $LOGGFILE

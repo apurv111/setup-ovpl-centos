@@ -8,3 +8,7 @@ export http_proxy="http://proxy.iiit.ac.in:8080"
 
 #set your https proxy.  Similar to the above.
 export https_proxy="http://proxy.iiit.ac.in:8080"
+
+#Loggfile path
+export LOGGFILE="setup-ovpl.log"
+export DATE=$(date)

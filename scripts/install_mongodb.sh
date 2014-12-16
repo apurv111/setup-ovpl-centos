@@ -20,6 +20,7 @@ service mongod start
 if [ $? -eq 0 ];then
 	echo "[[$DATE:: $0 :: Line $LINENO::]] Mongodb service started.." 2>&1 | tee -a $LOGGFILE
 elif [ $? -eq 1 ];then
+        sed 's/.*deamon.*/new/g' /etc/init.d/mongod
 	service mongod restart
 	
 else
