@@ -8,7 +8,7 @@ vz_template_file="ubuntu-12.04-custom-x86_64.tar.gz"
 cd $meta_dir
 echo "[[$DATE:: $0 :: Line $LINENO::]] Downloading $vz_template_file file to $meta_dir directory" 2>&1 | tee -a $LOGGFILE
 echo ""
-wget community.virtual-labs.ac.in/downloads/ubuntu-12.04-custom-x86_64.tar.gz
+wget http://community.virtual-labs.ac.in/downloads/ubuntu-12.04-custom-x86_64.tar.gz
 if [[ $? -ne 0 ]];then	
 	echo "[[$DATE:: $0 :: Line $LINENO::]] Error in Downloading $vz_template_file file to $meta_dir directory.." 2>&1 | tee -a $LOGGFILE
 fi
