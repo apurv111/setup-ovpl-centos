@@ -35,16 +35,22 @@ fi
 if [[ $UID -ne 0 ]]; then
   echo ""
   echo "$0 must be run as root!"
-  echo "Exiting.."
+  echo "[[$DATE:: $0 :: Line $LINENO::]] $0 must be run as root...." 2>&1 | tee -a $LOGFILE
+  echo "check log file exiting...."
   exit 1
+
+else
+  echo "[[$DATE:: $0 :: Line $LINENO::]] Started Invoking centos_prepare_ovpl.sh...." 2>&1 | tee -a $LOGFILE
+
 fi
 
 # check if meta directory exists
 if [[ ! -d "../meta" ]]; then
   echo ""
-  echo "You don't have the necessary files."
-  echo "Please contact the author of the script."
+  echo "[[$DATE:: $0 :: Line $LINENO::]] You don't have the necessary files please contact the author of the script...." 2>&1 | tee -a $LOGFILE
+  echo "Check log file exiting...."
   exit 1
+
 fi
 
 #updating system
